@@ -1,0 +1,76 @@
+{
+  "posters": [
+    {
+      "id": 1,
+      "title": "hawai poster",
+      "price": "25",
+      "url": "https://images.bigcartel.com/product_images/134939766/hawaii_poster_update_2014.jpg"
+    },
+    {
+      "id": 2,
+      "title": "vintage borabora poster",
+      "price": "23",
+      "url": "https://assets.bigcartel.com/product_images/154897999/Vintage_BoraBora_Print_Final.png"
+    },
+    {
+      "id": 3,
+      "title": "vintage moscow poster",
+      "price": "27",
+      "url": "https://assets.bigcartel.com/product_images/152517556/Vintage_Moscow_Print_FINAL!!!.png?auto=format&fit=max&h=1000&w=1000"
+    },
+    {
+      "id": 0,
+      "title": "beirut poster",
+      "price": "25.5",
+      "url": "https://assets.bigcartel.com/product_images/230085164/Beirut_Poster_Print_Final_smaller_wm.png"
+    },
+    {
+      "id": 4,
+      "title": "vintage istanbul poster",
+      "price": "20",
+      "url": "https://assets.bigcartel.com/product_images/152517208/Vintage_Istanbul_Print_Final.png"
+    },
+    {
+      "id": 5,
+      "title": "miami poster",
+      "price": "25",
+      "url": "https://assets.bigcartel.com/product_images/129102315/miami_poster_PRINT_UPDATE_FINAL.jpg"
+    },
+    {
+      "id": 6,
+      "title": "air france poster",
+      "price": "30",
+      "url": "https://i2.wp.com/printsatthemaphouse.files.wordpress.com/2014/10/posterp285w.jpg"
+    },
+    {
+      "id": 7,
+      "title": "vintage london poster",
+      "price": "25",
+      "url": "https://assets.bigcartel.com/product_images/134908248/vintage_london_update_2014_Print!.jpg"
+    },
+    {
+      "id": 8,
+      "title": "harry potter poster",
+      "price": "29.99",
+      "url": "http://www.posterposter.org/wp-content/uploads/2016/10/21.jpg"
+    },
+    {
+      "id": 9,
+      "title": "joker poster",
+      "price": "30",
+      "url": "https://posterspy.com/wp-content/uploads/2019/11/Joker1.jpg"
+    },
+    {
+      "id": 10,
+      "title": "phoenix poster",
+      "price": "25",
+      "url": "https://assets.bigcartel.com/product_images/146774296/phoenix_2014_print.png"
+    },
+    {
+      "id": 11,
+      "title": "mars explorers poster",
+      "price": "35",
+      "url": "https://d.ibtimes.co.uk/en/full/1524989/explorers-wanted-poster.jpg"
+    }
+  ]
+}

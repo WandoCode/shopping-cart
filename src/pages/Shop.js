@@ -1,18 +1,31 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ItemDisplay from "../components/ItemDisplay";
-import pictures from "../images/images";
 import uniqid from "uniqid";
+import { Link } from "react-router-dom";
 
 const Shop = () => {
-  const displayShopItems = () => {
-    return pictures.map((imgSrc) => {
-      return <ItemDisplay key={uniqid()} id={uniqid()} imgSrc={imgSrc} />;
-    });
+  const [pictures, setPictures] = useState([]);
+
+  const fetchImages = async () => {
+    const datas = await fetch("http://localhost:8080/posters");
+    const itemsArray = await datas.json();
+    setPictures(itemsArray);
   };
+
+  useEffect(() => {
+    fetchImages();
+  }, []);
+
   return (
-    <div className="shop">
-      {displayShopItems()} {pictures}
+    <div class="shop">
+      {pictures.map((pictureObj) => {
+        return (
+          <Link to={`/shop/${pictureObj.id}`} key={uniqid()}>
+            <ItemDisplay imgSrc={pictureObj.url} id={pictureObj.id} />
+          </Link>
+        );
+      })}
     </div>
   );
 };

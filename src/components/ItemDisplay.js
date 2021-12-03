@@ -1,7 +1,7 @@
 import React from "react";
 
 const ItemDisplay = (props) => {
-  const imgAlt = props.imgSrc.split("/")[3].split(".")[0];
+  const imgAlt = `poster ${props.id}`;
   return <img src={props.imgSrc} alt={imgAlt} id={props.id} />;
 };
 
