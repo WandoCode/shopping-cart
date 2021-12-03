@@ -25,10 +25,18 @@ const Item = (props) => {
     // Get the number of item selected by user
     const nbrItem = e.target[0].value;
 
+    // Form validation
+    if (isNaN(nbrItem)) {
+      return;
+    } else if (+nbrItem < 1) {
+      return;
+    }
+
     // Send information to cart
     props.addSelectionToCart({
       id: item.id,
-      quantity: nbrItem,
+      quantity: parseInt(nbrItem),
+      title: item.title,
     });
   };
 

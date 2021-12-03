@@ -18,7 +18,7 @@ const Shop = () => {
   }, []);
 
   return (
-    <div class="shop">
+    <div className="shop">
       {pictures.map((pictureObj) => {
         return (
           <Link to={`/shop/${pictureObj.id}`} key={uniqid()}>
