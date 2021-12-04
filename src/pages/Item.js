@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import ItemDisplay from "../components/ItemDisplay";
 
 const Item = (props) => {
@@ -19,16 +19,24 @@ const Item = (props) => {
     fetchItem();
   }, []);
 
+  // Allow redirection further in the function
+  let navigate = useNavigate();
+
+  // Handle adding item to the cart
   const addToCart = (e) => {
     e.preventDefault();
 
     // Get the number of item selected by user
     const nbrItem = e.target[0].value;
 
-    // Form validation
+    // Form validation (it's a number, it's more than 0)
     if (isNaN(nbrItem)) {
+      // Redirection
+      navigate("/error");
       return;
     } else if (+nbrItem < 1) {
+      // Redirection
+      navigate("/error");
       return;
     }
 
@@ -37,6 +45,7 @@ const Item = (props) => {
       id: item.id,
       quantity: parseInt(nbrItem),
       title: item.title,
+      price: parseInt(item.price),
     });
   };
 
