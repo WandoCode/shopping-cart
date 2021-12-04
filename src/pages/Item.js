@@ -13,7 +13,7 @@ const Item = (props) => {
     const item = datas.find((poster) => {
       return poster.id === idItem;
     });
-    setItem(item);
+    setItem({ ...item, title: item.title.toUpperCase() });
   };
 
   useEffect(() => {
@@ -53,14 +53,21 @@ const Item = (props) => {
   return (
     <div className="item">
       <LateralBoard items={props.items} />
-
-      <h3>{item.title}</h3>
       <ItemDisplay imgSrc={item.url} id={item.id} />
-      <div>Unit price: {item.price}</div>
-      <form onSubmit={addToCart}>
-        <input type="number" min="1" defaultValue="1" required />
-        <input type="submit" value="Add to cart" />
-      </form>
+      <div className="item-infos">
+        <h3>{item.title}</h3>
+        <form onSubmit={addToCart}>
+          <input
+            id="quantity-input"
+            type="number"
+            min="1"
+            defaultValue="1"
+            required
+          />
+          <input id="add-to-cart-btn" type="submit" value="Add to cart" />
+        </form>
+        <div> {item.price} € /unit</div>
+      </div>
     </div>
   );
 };

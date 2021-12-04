@@ -1,9 +1,12 @@
 nav {
+  position: fixed;
+  width: 100%;
   display: flex;
   align-items: center;
   background-color: rgb(7, 7, 168);
   color: aliceblue;
-  height: 120px;
+  height: $navbar-height;
+  z-index: 10;
   h3 {
     display: flex;
     justify-content: center;

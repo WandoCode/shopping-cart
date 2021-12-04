@@ -1,3 +1,9 @@
+$larter-board-width: 240px;
+$larter-board-color: #ebe0cc;
+$larter-board-min-height: 250px;
+
+$navbar-height: 70px;
+
 html,
 body,
 div,
@@ -99,8 +105,26 @@ nav,
 section {
   display: block;
 }
+
 body {
+  min-height: 100vh;
+  position: relative;
   line-height: 1;
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 220px;
+    background-image: url("https://images.bigcartel.com/product_images/134939766/hawaii_poster_update_2014.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-position-y: -350px;
+    z-index: -1;
+    opacity: 0.3;
+  }
 }
 ol,
 ul {
@@ -120,4 +144,9 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+.main {
+  padding-top: $navbar-height;
+  padding-right: $larter-board-width;
 }

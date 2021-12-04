@@ -102,7 +102,24 @@ section {
 }
 
 body {
+  min-height: 100vh;
+  position: relative;
   line-height: 1;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 220px;
+  background-image: url("https://images.bigcartel.com/product_images/134939766/hawaii_poster_update_2014.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position-y: -350px;
+  z-index: -1;
+  opacity: 0.3;
 }
 
 ol,
@@ -128,12 +145,59 @@ table {
   border-spacing: 0;
 }
 
+.main {
+  padding-top: 70px;
+  padding-right: 240px;
+}
+
+.lateral-board {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 240px;
+  background-color: #ebe0cc;
+  min-height: 250px;
+  z-index: 0;
+  margin-top: 70px;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.lateral-board table {
+  text-align: left;
+  border-collapse: collapse;
+  width: 100%;
+}
+.lateral-board table td,
+.lateral-board table th {
+  border: 0px solid #ffffff;
+  padding: 3px 4px;
+}
+.lateral-board table tbody td {
+  font-size: 15px;
+}
+.lateral-board table thead {
+  border-bottom: 4px solid #333333;
+}
+.lateral-board table thead th {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: left;
+}
+
 nav {
+  position: fixed;
+  width: 100%;
   display: flex;
   align-items: center;
   background-color: #0707a8;
   color: aliceblue;
-  height: 120px;
+  height: 70px;
+  z-index: 10;
 }
 nav h3 {
   display: flex;
@@ -149,10 +213,65 @@ nav a {
   color: aliceblue;
 }
 
-.lateral-board {
-  background-color: antiquewhite;
+.shop {
+  display: flex;
+  flex-wrap: wrap;
+}
+.shop img {
+  margin: 5px;
+  width: 320px;
+  transition: transform 0.2s ease-out;
+}
+.shop img:hover {
+  transform: scale(1.01);
 }
 
-.shop img {
-  width: 350px;
+.item {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 30px;
+}
+.item h3 {
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+.item .item-infos {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.item #quantity-input {
+  width: 50px;
+  height: 33px;
+  text-align: center;
+  font-size: 18px;
+  margin-right: 5px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  border: none;
+  background-color: black;
+  color: white;
+}
+.item #quantity-input:focus {
+  outline: none;
+}
+.item #add-to-cart-btn {
+  width: 150px;
+  height: 35px;
+  font-size: 18px;
+  color: white;
+  background-color: #0707a8;
+  border-radius: 2px;
+  border: none;
+  transition: font-size 0.1s;
+}
+.item #add-to-cart-btn:hover {
+  font-size: 19px;
+}
+
+.big-img {
+  max-height: 90vh;
 }/*# sourceMappingURL=index.css.map */

@@ -77,28 +77,30 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <Routes>
-        <Route index path="/" element={<Home items={cartArray} />} />
-        <Route path="shop" element={<Shop items={cartArray} />} />
-        <Route
-          path="shop/:itemId"
-          element={
-            <Item addSelectionToCart={addSelectionToCart} items={cartArray} />
-          }
-        />
-        <Route
-          path="cart"
-          element={
-            <Cart
-              items={cartArray}
-              removeItems={removeItems}
-              removeOneItem={removeOneItem}
-              addOneItem={addOneItem}
-            />
-          }
-        />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
+      <div className="main">
+        <Routes>
+          <Route index path="/" element={<Home items={cartArray} />} />
+          <Route path="shop" element={<Shop items={cartArray} />} />
+          <Route
+            path="shop/:itemId"
+            element={
+              <Item addSelectionToCart={addSelectionToCart} items={cartArray} />
+            }
+          />
+          <Route
+            path="cart"
+            element={
+              <Cart
+                items={cartArray}
+                removeItems={removeItems}
+                removeOneItem={removeOneItem}
+                addOneItem={addOneItem}
+              />
+            }
+          />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </div>
     </div>
   );
 }

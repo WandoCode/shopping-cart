@@ -1,5 +1,12 @@
 .shop {
+  display: flex;
+  flex-wrap: wrap;
   img {
-    width: 350px;
+    margin: 5px;
+    width: 320px;
+    transition: transform 0.2s ease-out;
+    &:hover {
+      transform: scale(1.01);
+    }
   }
 }

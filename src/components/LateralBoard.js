@@ -5,9 +5,11 @@ function LateralBoard(props) {
   const showCartItems = () => {
     return props.items.map((item) => {
       return (
-        <div className="lateral-items" key={uniqid()}>
-          {item.title}: x{item.quantity}
-        </div>
+        <tr className="lateral-items" key={uniqid()}>
+          <td>
+            {item.title} x{item.quantity}
+          </td>
+        </tr>
       );
     });
   };
@@ -18,7 +20,14 @@ function LateralBoard(props) {
   };
   return (
     <div className="lateral-board">
-      {showCartItems()}
+      <table>
+        <thead>
+          <tr>
+            <th>Cart</th>
+          </tr>
+        </thead>
+        <tbody>{showCartItems()}</tbody>
+      </table>
       {props.items.length !== 0 && (
         <button onClick={showCartPage}>Show details</button>
       )}
