@@ -78,11 +78,13 @@ function App() {
     <div className="App">
       <NavBar />
       <Routes>
-        <Route index path="/" element={<Home />} />
-        <Route path="shop" element={<Shop />} />
+        <Route index path="/" element={<Home items={cartArray} />} />
+        <Route path="shop" element={<Shop items={cartArray} />} />
         <Route
           path="shop/:itemId"
-          element={<Item addSelectionToCart={addSelectionToCart} />}
+          element={
+            <Item addSelectionToCart={addSelectionToCart} items={cartArray} />
+          }
         />
         <Route
           path="cart"

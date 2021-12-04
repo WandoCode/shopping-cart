@@ -28,7 +28,7 @@ const Cart = (props) => {
           </div>
         );
       })}
-      <div>Total: {totalPrice}</div>
+      {totalPrice !== 0 && <div>Total: {totalPrice}</div>}
     </div>
   );
 };

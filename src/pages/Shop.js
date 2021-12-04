@@ -3,8 +3,9 @@ import { useState, useEffect } from "react";
 import ItemDisplay from "../components/ItemDisplay";
 import uniqid from "uniqid";
 import { Link } from "react-router-dom";
+import LateralBoard from "../components/LateralBoard";
 
-const Shop = () => {
+const Shop = (props) => {
   const [pictures, setPictures] = useState([]);
 
   const fetchImages = async () => {
@@ -19,6 +20,8 @@ const Shop = () => {
 
   return (
     <div className="shop">
+      <LateralBoard items={props.items} />
+
       {pictures.map((pictureObj) => {
         return (
           <Link to={`/shop/${pictureObj.id}`} key={uniqid()}>

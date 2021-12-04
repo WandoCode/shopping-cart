@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import ItemDisplay from "../components/ItemDisplay";
+import LateralBoard from "../components/LateralBoard";
 
 const Item = (props) => {
   const [item, setItem] = useState("");
@@ -51,8 +52,11 @@ const Item = (props) => {
 
   return (
     <div className="item">
+      <LateralBoard items={props.items} />
+
       <h3>{item.title}</h3>
       <ItemDisplay imgSrc={item.url} id={item.id} />
+      <div>Unit price: {item.price}</div>
       <form onSubmit={addToCart}>
         <input type="number" min="1" defaultValue="1" required />
         <input type="submit" value="Add to cart" />
